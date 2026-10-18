@@ -34,7 +34,7 @@ D. Padding makes a 9 × 9 grid; the window moves three cells and gives a 3 × 3 
 
 ## 3. Convolution followed by ReLU
 
-One input window has rows [2, 1] and [3, 4]. Its filter has rows [1, −1] and [0, 1], with bias b = −6. Multiply corresponding entries without reversing the filter, sum them and add b to obtain s; then use z = max(0, s). What are s and z?
+One input window has rows [2, 1] and [3, 4]. A ReLU convolutional unit uses a filter with rows [1, −1] and [0, 1], with bias b = −6. Using the CNN convention without reversing the filter, what are its preactivation s and output z?
 
 A. s = 5, z = 5
 B. s = −1, z = −1
@@ -49,7 +49,7 @@ D. s = −1, z = 0
 
 ## 4. Channels and parameter counts
 
-A standard dense convolution receives a 10 × 10 × 3 input and uses F = 8 filters of size 3 × 3, stride 1, no padding, no dilation and one bias per filter. Use output side = input side − K + 1 and parameters = F(K²C_{in} + 1). What are the output shape and parameter count?
+A standard dense convolution receives a 10 × 10 × 3 input and uses F = 8 filters of size 3 × 3, stride 1, no padding, no dilation and one bias per filter. What are the output shape and parameter count?
 
 A. 8 × 8 × 3 output; 224 parameters
 B. 8 × 8 × 8 output; 224 parameters
